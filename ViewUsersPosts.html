@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View User Posts</title>
+    <meta charset = "UTF-8">
+    <meta name= "viewport" content ="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="header">
+            <h1>View Posts</h1>
+        </div>
+
+        <form action = "php/ViewUsersPosts.php" method="post">
+
+        <!-- Dropdown bar via PHP -->
+        <?php
+
+            // Test Connection
+            $mysqli = new mysqli("mysql.eecs.ku.edu", "e828d717", soo4fai7, "e828d717");
+
+            if ($mysqli->connect_error) {
+                die("Connections error " . $mysqli->connect_error . "<br/>");
+            }
+
+            $query = "SELECT * FROM Users";
+            $table = $mysqli->query($query);
+
+
+            // Drop Down Echo'd
+            if ($table) {
+                echo '<select name="username">';
+                while ($row = $table->fetch_assoc()) {
+                    $user = $row["user_ID"];
+                    echo '<option value="' . $user . '">' . $user . '</option>';
+                }
+                echo "</select>";
+            }
+
+            $mysqli->close();
+
+        ?>
+
+        <button type="submit">Submit</button>
+        </form>
+
+    </div>
+  </body>
+</html>

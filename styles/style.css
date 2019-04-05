@@ -1,0 +1,49 @@
+html {
+    font-size: 10px;
+    font-family: "Open Sans", Gadget, sans-serif;
+    background-color: rgb(248, 248, 248);
+  }
+  
+  
+  h1 {
+    font-size: 60px;
+    text-align: center;
+    padding: 0px;
+    color: rgb(0, 0, 0);  
+  }
+  
+  p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0); 
+  }
+
+  input {
+    display: block;
+    background:  linear-gradient(35deg, rgb(107, 220, 254) 40%, rgb(255, 186, 226) 90%);
+    color: rgb(0, 0, 0);  
+    border-color: rgb(248, 248, 248);
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+
+  button {
+    display: block;
+    background:  linear-gradient(35deg, rgb(107, 220, 254) 40%, rgb(255, 186, 226) 90%);
+    color: rgb(0, 0, 0);  
+    border-color: rgb(248, 248, 248);
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+  
+  
